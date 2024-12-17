@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доски</title>
+</head>
+<body>
+<h1>Список досок</h1>
+<ul>
+    <a href="{% url 'login' %}">Войти</a>
+    {% for board in boards %}
+    <li>
+        <a href="{% url 'board_detail' board.id %}">{{ board.name }}</a>
+        - {{ board.description }}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

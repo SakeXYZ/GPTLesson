@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ board.name }}</title>
+</head>
+<body>
+<h1>{{ board.name }}</h1>
+<p>{{ board.description }}</p>
+<h2>Колонки</h2>
+<ul>
+    {% for column in board.columns.all %}
+    <li>{{ column.name }} - Позиция: {{ column.position }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
